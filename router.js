@@ -9,7 +9,7 @@ module.exports= function(app){
 
   app.post('/signin',requireSignin,authentication.signin)
   app.get('/',requireAuth,function(req,res){
-    res.send({hi:'there'});
+    res.send({message:'super secret code is ABC123'});
   })
 
 }

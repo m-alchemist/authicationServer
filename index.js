@@ -7,10 +7,11 @@ const bodyParser=require('body-parser');
 const app=express();
 const router=require('./router');
 const mongoose=require('mongoose');
-
+const cors=require('cors');
 //app setup
 app.use(morgan('combined'));
 app.use(bodyParser.json({type:'*/*'}));
+app.use(cors());
 router(app);
 
 
